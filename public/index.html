@@ -9,26 +9,7 @@
     <!-- Manifest and apple icon -->
     <link rel="apple-touch-icon" href="/logo192.png" />
     
-    <script> 
-      const frontendApi = "clerk.unlimitpotential.com";
-      
-      // Create a script that will be loaded asynchronously in 
-      // your page. 
-      const script = document.createElement('script');
-      script.setAttribute('data-clerk-frontend-api', frontendApi);
-      script.async = true;
-      script.src = `https://${frontendApi}/npm/@clerk/clerk-js@1/dist/clerk.browser.js`
-      // Add a listener so you can initialize ClerkJS
-      // once it's loaded.
-      script.addEventListener('load', async function(){
-        // Signs-out the current user.
-        await window.Clerk.signOut();
-        await window.Clerk.load({
-          // Set load options here...
-        });
-      });
-      document.body.appendChild(script);
-    </script>
+   
       </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
